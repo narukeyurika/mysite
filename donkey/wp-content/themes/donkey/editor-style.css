@@ -7,35 +7,25 @@
     background-color: #F7F5ED; /* 背景色を薄いグレーに設定 */
 }
 
-.editor-styles-wrapper h1{
-  padding: 15px 0;
-}
-.editor-styles-wrapper h2 {
-  padding: 15px;
-  background-color: #04b1ff;
-  color: white!important;
-}
-
-
 
 .editor-styles-wrapper h1{
   font-weight: bold;
   font-size:32px;
   margin:0 0 0;
-  padding-top: 50px;
-  color: #66a857;
+  padding: 20px 0;
+   color: #333;
 }
 .editor-styles-wrapper h2{
   font-weight: bold;
   font-size:25px;
-  margin:50px 0 0 0;
+  margin:25px 0;
   padding:10px;
   background:#aad66c;
   color:white;
 }
 .editor-styles-wrapper h3{
   font-size:22px;
-  margin:40px 0 0 0;
+  margin:20px 0;
   padding:0 0 10px 0;
   border-bottom:2px solid #aad66c;
 }
@@ -53,7 +43,9 @@
 .editor-styles-wrapper h3 + h4{
   margin-top:25px;
 }
-.editor-styles-wrapper p,
+.editor-styles-wrapper p{
+  line-height: 2;
+}
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ol,
 .editor-styles-wrapper table{

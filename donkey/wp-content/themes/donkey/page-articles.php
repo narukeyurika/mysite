@@ -1,11 +1,34 @@
 <?php /* Template Name: 新着記事全一覧 */?>
 <?php get_header(); ?>
 
-<main class="lower page-articles">
-    <?php the_title( '<h1 class="lower-title">', '</h1>' ); ?>
-</ul>
-
+<main class="main page standard common-lower">
+<?php
+$sTitle = esc_html(get_the_title());
+echo <<<EOM
+  <section id="main-visual-underlayer">
+    <div class="mv-wrapper">
+      <div class="mv-img-wrapper"></div>
+      <h1 class="title">{$sTitle}</h1>
+    </div>
+  </section>
+EOM;
+/* アイキャッチがある時のみ、CSSで設定している背景を上書きする */
+if ( has_post_thumbnail() ){
+  $sBgUrl = esc_url(get_the_post_thumbnail_url( get_the_ID(), 'large'));
+  echo breadcrumb_func(); //パンくずリスト表示
+  echo <<<EOM
+  <style>
+    .page.standard #main-visual-underlayer .mv-wrapper {
+      background-image: url({$sBgUrl});
+    }
+  </style>
+EOM;
+}
+?>
+</main>
+<div class="wrap_bg">
 <section class="article-lists">
+
 <?php
 /**
 * 記事一覧の表示
@@ -41,19 +64,9 @@ $sCategoryName = $aCategory[0]->cat_name;
             // 抜粋が空だったら本文から文字を抽出
             $sPostExcerpt = mb_substr($sPostContent, 0, 60) . '...';
         }
-
         echo '<div class="box">';
         echo '<div class="detail">';
         echo '<p class="post-date">' . esc_html($sPostDate) . '</p>';
-        //アイキャッチ表示
-        echo '<span class="image">';
-        if ( has_post_thumbnail( $post->ID ) ) {
-            echo get_the_post_thumbnail( $post->ID, 'medium' );
-        } else {
-            echo '<img src="' . esc_url( get_theme_file_uri( "img/default-image.png" ) ) . '" alt="">';
-        }
-        echo '</span>';
-        //
         echo '<h3 class="title"><a href="' . esc_url($sPostUrl) . '">' . esc_html($post->post_title) . '</a></h3>';
         echo '<p class="excerpt">' . esc_html($sPostExcerpt) . '</p>';
         echo '</div><!--/.detail-->';
@@ -91,10 +104,8 @@ if(1 != $iPages) {
     echo "</div>\n";
 }
 ?>
-
 <?php wp_reset_query(); ?>
 
     </section>
-
-</main>
+</div>
 <?php get_footer(); ?>

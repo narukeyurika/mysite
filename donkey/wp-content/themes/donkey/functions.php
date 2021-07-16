@@ -11,9 +11,13 @@ function custom_theme_setup() {
   add_theme_support( "post-thumbnails" );
   set_post_thumbnail_size( 1200, 800);
   register_nav_menus(
-		array( "global-nav" => "グローバルナビゲーション")
+		array(
+            "global-nav" => "グローバルナビゲーション",
+            "footer-menu" => "フッターメニュー",
+            "mobile-menu" => "モバイルメニュー"
+            )
 	);
-register_nav_menu( 'footer-menu', 'フッターメニュー' );
+
 }
 add_action("after_setup_theme","custom_theme_setup");
 
@@ -61,7 +65,14 @@ function js_scripts() {
         array(),
         "1.0",
         true
+);
+    wp_enqueue_script('webp',
+        get_template_directory_uri() . '/js/modernizr-custom.js',
+        array(),
+        "1.0",
+        true
     );
+
 }
 add_action( 'wp_enqueue_scripts', 'js_scripts' );
 

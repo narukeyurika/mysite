@@ -18,7 +18,7 @@
         </button>
       </header>
 <!-----heder ue----->
-      <div class="flex">
+      <div class="header_wrap">
         <div class="f_item">
             <!--ロゴ-->
             <div class="logo">
@@ -48,3 +48,28 @@ wp_nav_menu(//ナビゲーションを取得
 	)
 );
 ?>
+
+
+ <div class="mobile-menu">
+<aside class="js-offcanvas">
+<?php wp_nav_menu(//モバイルナビゲーションの表示位置
+     array (
+          "theme_location" => "mobile-menu",
+          "menu_class" => "mobile-menu"
+          )
+); ?>
+<!-----ハンバーガー下層部分----->
+<div class="ham_logo">
+        <a href="#">
+            <img src="<?php echo esc_url( get_theme_file_uri( "img/header/logo.svg" ) ); ?>" alt="ロゴ画像">
+</div>
+<div class="ham_content">
+        <p>お問い合わせ・ご相談</p>
+        <p class="ham_tel">00-0000-0000</p>
+        <p class="ham_time">【営業時間】9：00~17：00<br>
+                            【休日】日・祝・年末年始
+        </p>
+        <a href="#" class="ham_btn">メールフォームはこちら</a>
+</div>
+</aside>
+</div>

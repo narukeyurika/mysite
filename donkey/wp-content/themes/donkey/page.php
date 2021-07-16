@@ -1,6 +1,5 @@
 <?php //固定ページ ?>
 <?php get_header(); ?>
-<?php echo breadcrumb_func(); //パンくずリスト表示?>
 
 
 <?php while( have_posts() ) : the_post(); ?>
@@ -18,6 +17,7 @@ EOM;
 /* アイキャッチがある時のみ、CSSで設定している背景を上書きする */
 if ( has_post_thumbnail() ){
   $sBgUrl = esc_url(get_the_post_thumbnail_url( get_the_ID(), 'large'));
+  echo breadcrumb_func(); //パンくずリスト表示
   echo <<<EOM
   <style>
     .page.standard #main-visual-underlayer .mv-wrapper {
@@ -27,12 +27,11 @@ if ( has_post_thumbnail() ){
 EOM;
 }
 ?>
-
-
+<div class="editor_bg">
   <div class="wysiwyg-editor">
     <?php the_content(); ?>
   </div>
-
+</div>
 </main>
 <?php endwhile; ?>
 
