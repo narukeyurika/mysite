@@ -300,7 +300,6 @@ h2 {
   border-bottom-color: #CCC;
   width: 100%;
   margin: 0;
-  background-color: #444;
   }
   .mobile-menu .menu-item:last-child{
   padding-bottom: 0;
@@ -313,7 +312,9 @@ h2 {
   padding-bottom: 10px;
   text-indent: 40px;
   position: relative;
+
 }
+
 .mobile-menu .sub-menu li {
   display: block;
     width: 100%;

@@ -39,7 +39,13 @@ $(function (){
         });
       });
 
-
+$(function () {
+  $('.mobile-menu.menu-item').click(function () {  // マウスを乗せると
+    $(this).find('ul .sub-menu').stop().slideDown();//サブメニューを表示
+  }).mouseout(function () {
+    $(this).find('ul. sub-menu').stop().slideUp();//サブメニューを非表示
+  });
+});
 
 // ドロップダウンメニュー
 //.dropdown-menuを一旦隠す
@@ -56,7 +62,7 @@ $('.menu').hover(function(){
 });
 });
 
-$(function(){
+$(function(){//ハンバーガーメニュー元の開閉
   $('.sub_menu').hide();
   $('.main_menu').click(function(){
   $('ul.sub_menu').slideUp();
@@ -67,3 +73,28 @@ $(function(){
 }
   });
 });
+
+
+
+
+
+
+
+$(function () {//ハンバーガーメニューの子要素の開閉
+$('.mobile-menu .sub-menu').hide();
+$(".mobile-menu .menu-item-has-children").on("click", function () {
+  $('.mobile-menu .sub-menu').slideToggle('slow');
+  $('.mobile-menu .menu-item-has-children').toggleClass('open');
+  return false;
+});
+});
+// return false;を指定すると推移は停止できるがクリックできなくなっちゃう
+/*子要素が全部開かないようにネクストを指定したけどうまくいかない
+$(function (){
+  $(".mobile-menu .menu-item-has-children").on("click", function () {
+    $('this').next().css('color','green');
+    $('.mobile-menu .menu-item-has-children').toggleClass('open');
+    return false;
+  });
+  });
+*/
