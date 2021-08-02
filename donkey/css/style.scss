@@ -1,0 +1,1258 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+
+$xxl: 1600px;
+$xl: 1199px;
+$lg: 991px;
+$md: 767px;
+$sm: 991px;
+$xs: 320px;
+
+@mixin xxl-or-more {
+  @media (min-width: ($xxl)) {
+      @content;
+  }
+}
+@mixin xxl {
+  @media (max-width: ($xxl)) {
+      @content;
+  }
+}
+@mixin xl {
+  @media (max-width: ($xl)) {
+      @content;
+  }
+}
+@mixin lg {
+  @media (max-width: ($lg)) {
+      @content;
+  }
+}
+@mixin md {
+  @media (max-width: ($md)) {
+      @content;
+  }
+}
+@mixin sm {
+  @media (max-width: ($sm)) {
+      @content;
+  }
+}
+@mixin xs {
+  @media (max-width: ($xs)) {
+      @content;
+  }
+}
+
+@mixin sm-or-more {
+  @media (min-width: ($sm + 1)) {
+      @content;
+  }
+}
+
+
+/*-----変数------*/
+$main_color: #90CB83;
+
+/*-----------*/
+body {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+body a {
+  text-decoration: none;
+  color: #333;
+  line-height: 30px;
+}
+
+main {
+  background-color: #F7F5ED;
+  margin: auto;
+  max-width: 1200px;
+  @include sm{
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: $sm;
+  }
+}
+
+/*-------------共通アイテム-------------*/
+h2{
+  font-size: 35px;
+  font-weight: 700;
+  padding: 10px 0 22px 55px;
+  display: inline-block;
+  background: url("../img/title_icon.png")no-repeat;
+  background-size: 55px;
+  background-position: left -5px;
+  @include sm{
+  font-size: 20px;
+  background-size: 30px;
+  padding: 3px 0 0 35px;
+  margin: 10px 0;
+  background-position: left 3px;
+  }
+}
+/*--詳しく見るボタン--*/
+.button{
+  @include sm{
+    width: 200px;
+    height: 30px;
+    padding-top: 0px;
+    margin-left: 60px;
+    }
+  width: 298px;
+  padding: 12px 0;
+  border-radius: 28px;
+  text-align: center;
+  margin: 0 38%;
+  a{
+    background: url("../img/btn_icon.png")no-repeat;
+    background-size: 18px;
+    background-position: left;
+    color:#FFF;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 20px 20px 30px;
+  }
+  background-color: $main_color;
+  transition: 1s;
+  &:hover{
+    background-color: #66a857;
+  }
+  }
+  .bgcolor{
+    background-color: #F7F5ED;
+  }
+  /*-------------------------------------------------------------*/
+  /*----------------heder--------------*/
+  /*--logo--*/
+  .logo {
+    img{
+    width: 300px;
+    margin-left: 40px;
+    @include sm{
+    width: 150px;
+    height: auto;
+    margin-top: 0px;
+    margin-left: 10px;
+    }
+    }
+  }
+  .flex {
+    max-width: 1400px;
+    width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    @include sm{
+      display: block;
+      max-width: 375px;
+      height: 45px;
+      background-color: #FFF;
+      margin-top:  10px;
+    }
+  }
+
+  .f_item:nth-child(2){ /* ロゴ横左寄せ */
+    margin-left: auto;
+  }
+  .tel_green {
+    @include sm{
+      display: none;
+        }
+    font-weight: 700;
+    color: #90CB83;
+    font-size: 30px;
+    margin-right: 40px;
+    img{
+      margin: 0 3px 4px 0;
+      width: 25px;
+      height: 25px;
+      }
+  }
+  .tel_item{
+    @include sm{
+      display: none;
+        }
+    display: inline-block;
+    margin: 8px 10px 0;
+  }
+  .tel_item2{
+    @include sm{
+      display: none;
+        }
+    position: absolute;
+    margin-top: 20px;
+  }
+
+/*--nav--*/
+  .global-nav{
+    @include sm{
+    display: none;
+        }
+    background: #fff;
+    width: 100%;
+    max-width: 1400px;
+    text-align: center;
+    margin:0 auto;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+  }
+  .global-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .global-nav ul li a{
+    display: block;
+    transition: all 0.3s;
+    outline-offset: -1px;
+  }
+  .global-nav ul li a:hover{
+    color: $main_color;
+  }
+  /*ナビゲーションアイコン*/
+  .nav_icon a {
+    width: auto;
+    height: 0px;
+    background: url("../img/nav_off.png")no-repeat;
+    background-size: 16px;
+    background-position: right 7px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .nav_icon a:hover {/*-----ホバーで背景画像（アイコン）を切り替える-----*/
+    background-image: url("../img/nav_on.png");
+  }
+  /*ドロップダウンメニュー*/
+  .global-nav ul li > ul.sub-menu{
+    border:2px solid $main_color;
+    display: none;
+    position: absolute;
+    top:180px;
+    width: auto;
+    height: auto;
+    padding: 30px;
+    text-align: left;
+    background: rgba(255,255,255,0.96);
+    line-height: 30px;
+  }
+  .sub-menu::before{/*--吹き出し三角下部分--*/
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 18%;
+    margin-left: -15px;
+    border: 20px solid transparent;
+    border-bottom: 14px solid $main_color;
+    border-width: 0 10px 18px 10px;
+    z-index: 2;
+  }
+  .sub-menu::after{/*--吹き出し三角上部分--*/
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 19.1%;
+    margin-left: -15px;
+    border: 13px solid transparent;
+    border-bottom: 13px solid #FFF;
+    border-width: 0 8px 16px 8px;
+    z-index: 2;
+  }
+  /*-----サブメニューアイコン-------*/
+  .sub_menu_icon{
+    width: auto;
+    height: 30px;
+    background: url("../img/sub_menu_icon.png")no-repeat;
+    background-size: 16px;
+    display: inline;
+    background-position: left;
+    padding-left: 20px;
+  }
+
+
+/*-----ham---------------------------------------------------------------------*/
+header{/*--三本線位置調整---*/
+background-color:$main_color;
+padding: 0 5px 5px 5px;
+position: fixed;
+top:15px;
+right: 20px;
+opacity: 0.8;
+display: none;
+z-index: 5;
+  @include sm{
+    display: block;
+  }
+}
+ul, li{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+#category {
+  text-align: left;
+  padding-bottom: 10px;
+  font-size: 15px;
+  color: #333;
+  padding-top: 10px;
+  width: auto;
+  a {
+    color: #666;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+.main_menu {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #ffffff;
+  padding-left: 20px;
+  text-indent: 10;
+  display: block;
+  position: relative;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #CCC;
+  width: 100%;
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 0px;
+    border-top: solid 2px $main_color;
+    border-right: solid 2px $main_color;
+    -ms-transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -6px;
+  }
+}
+.main_menu2{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #fff;
+  padding-left: 20px;
+  text-indent: 10;
+  display: block;
+  position: relative;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-color: #CCC;
+  width: auto;
+  .main_menu2:hover{
+    background-color: #87aa58;
+    color: #FFF;
+  }
+}
+#menu {
+  .open::before {
+    -ms-transform: rotate(315deg);
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+    margin-top: -3px;
+  }
+  .main_menu:hover, .open {
+    background-color: $main_color;
+    color: #FFF;
+  }
+  .main_menu:hover::before, .open::before {
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+  }
+}
+.sub_menu li a {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-indent: 40px;
+  background-color: #ffffff;
+  display: block;
+  position: relative;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(238, 238, 238);
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: solid 4px transparent;
+    border-left: solid 6px #739100;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -4px;
+    margin-left: 25px;
+  }
+  &:hover {
+    background-color: #aad66c;
+    &::before {
+      border-left: solid 6px #ffffff;
+    }
+  }
+}
+
+
+.ham_content{
+  margin-left: 50px;
+  .ham_logo{
+    img{
+      width: 190px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .ham_time{
+    font-size: 12px;
+    height: 50px;
+    margin-left: 10px;
+  }
+  p{font-size: 14px;}
+  .ham_tel{
+    color: $main_color;
+    font-size: 20px;
+    font-weight: 700;
+    width: auto;
+    height: 0px;
+    background: url("../img/header/tel_icon.png")no-repeat;
+    background-size: 16px;
+    background-position: left;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    line-height: 25px;
+  }
+  .ham_btn{
+    font-size: 14px;
+    font-weight: 600;
+    background-color: $main_color;
+    border-radius: 10px;
+    height: 300px;
+    padding: 5px;
+    }
+}
+
+
+/*-----メイン画像------------------------------------------------------------------------------------*/
+.key_visual{
+margin:25px auto 0;
+max-width: 1400px;
+.smimg{
+  display: none;
+}
+.pcimg{
+  display: block;
+}
+  @include sm{
+  margin-top: -30px;
+    img{
+    width: 100%;
+    max-width: $sm;
+    margin-top: 0px;
+  }
+  .pcimg{
+    display: none;
+  }
+  .smimg{
+    display: block;
+  }
+  }
+}
+
+/*-----私たちについて---------------------------------------------------------------------------------*/
+.about{
+  padding-top: 50px;
+  @include sm{padding-top:20px;}
+p{
+  margin-top: 50px;
+  margin-bottom: 37px;
+  font-size: 20px;
+  line-height: 30px;
+  width: auto;
+  font-weight: 400;
+  @include sm{
+    font-size: 16px;
+    width: 95%;
+    line-height: 30px;
+    margin: 10px;
+    }
+  }
+.about_img{
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+  }
+}
+
+
+/*-----お知らせ-------------------------------------------------------------------------------------*/
+.news{
+  max-width: 1200px;
+.news_box{
+  margin-top: 100px;
+  @include sm{
+    margin-top: 50px;
+  }
+  h2{
+    background-image: none;
+    @include sm{
+    margin-left: 60px;
+    font-size: 20px;
+    }
+  }
+  display: flex;
+  @include sm{
+  display: inline-block;
+    }
+    .news_title_box{
+      padding-top: 70px;
+      padding-left: 60px;
+      background: #FFF;
+      @include sm{
+      padding-top: 20px;
+      padding-left: 20px;
+        }
+      .news_title{
+      padding: 0;
+      border-bottom: dashed 2.5px $main_color;
+      width: 150px;
+      @include sm{
+      width: auto;
+      margin-left: 30%;
+      margin-bottom: 20px;
+        }
+      }
+      img{
+        display: block;
+        margin-right: 100px;
+        margin-top: 15px;
+        width: 126px;
+        height: auto;
+        @include sm{
+        display: inline;
+        width: 50px;
+        position: relative;
+        top:-10px;
+        margin-left: 5px;
+        margin-right: 0;
+          }
+      }
+    }
+    .news_contents_box{
+      @include sm{
+        padding: 0;
+      }
+      flex-grow: 2;
+      margin: 0px;
+      background: #FFF;
+      padding: 50px 30px 50px 0;
+      dl{
+        display: flex;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        border-bottom: dashed 1px #D2D2D2;
+        @include sm{
+          margin: 0;
+        }
+      }
+      dd{
+        flex-grow: 2;
+        margin-left: 100px;
+      }
+      dt{
+        width: 10%;
+        font-weight: 400;
+      }
+    }
+  }
+  .news_more{
+    font-size: 20px;
+    text-align: right;
+    padding: 0 30px;
+    background: #FFF;
+    margin-bottom: 100px;
+    @include sm{
+    font-size: 14px;
+    margin: 0 0 50px;
+    padding: 0 0 10px;
+    }
+    a{
+      &:hover{
+        color: $main_color;
+      }
+    }
+    .news_more_icon{
+      text-align: right;
+      width: 90%;
+      height: 5px;
+      background: url("../img/more_icon.png")no-repeat;
+      background-size: 16px;
+      background-position: left;
+      padding-left: 20px;
+    }
+  }
+}
+
+
+/*-----サービス内容-------------------------------------------------------------------------------------*/
+.service{
+  /*--身体介護--*/
+  .service1{
+    height: 500px;
+    width: 100%;
+    @include sm{
+    height: 300px;
+      }
+  h3{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 15px 0 50px 54px;
+    padding-top: 45px;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+    width: 160px;
+    @include sm{
+    margin: 0 0 10px 10px;
+    font-size: 20px;
+    width: 125px;
+    padding-top: 30px;
+      }
+    &::before{
+      @include sm{
+        top:60px;
+        width: 120px;
+      }
+      position: absolute;
+      content: "";
+      width: 155px;
+      height: 3px;
+      background-color: $main_color;
+      top: 90px;
+    }
+    }
+  p{
+    margin:0 55px 60px;
+    line-height: 30px;
+    @include sm{
+    line-height: 30px;
+    margin: 10px;
+    width: 250px;
+      }
+    }
+  .box_1{
+    position: relative;
+    width: 570px;
+    height: 430px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 3;
+    @include sm{
+    width: 270px;
+    height: 320px;
+    margin-top: 10px;
+      }
+    .button{
+      margin-left: 150px;
+      @include sm{
+        a{font-size: 16px;
+          padding: 10px 10px 10px 30px;
+        }
+      padding: 0;
+      height: 30px;
+      width: 150px;
+      margin-left: 50px;
+      margin-bottom: 40px;
+        }
+    }
+    }
+  .box_2{/*--img--*/
+    width: 100%;
+    max-width: 640px;
+    position: relative;
+    top:-410px;
+    left: 410px;
+    z-index: 1;
+    @include sm{
+      width: 75%;
+      position: relative;
+      left: 80px;
+      top: -90px;
+      }
+    img{
+        width: 100%;
+        }
+      }
+  .triangle-left{
+        z-index: 2;
+        position: relative;
+        top: -270px;
+        left: 570px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 35px 0 35px 40px;
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.7);
+        @include sm{
+          top:-15px;
+          left:80px;
+          transform:rotate(90deg);
+          }
+      }
+  }
+  /*--生活援助--*/
+  .service2{
+  height: 630px;
+  @include sm{
+  height: 670px;
+    }
+  .box_3{/*--img--*/
+    position:relative;
+    top:-300px;
+    right: 0px;
+    margin-left: 100px;
+    @include sm{
+    top: -80px;
+    right: 100px;
+      img{
+        width: 100%;
+      }
+      }
+      }
+
+  .box_4{
+    @include sm{
+      width: 270px;
+      margin-left: 30px;
+      margin-bottom: 150px;
+      height: 320px;
+      top: 170px;
+      left: 50px;
+      }
+    position: relative;
+    width: 570px;
+    height: 430px;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 3;
+    top:50px;
+    right: 0px;
+    margin-bottom: 100px;
+    margin: 0 0 0 630px;
+    .button{
+      margin-left: 150px;
+      @include sm{
+        a{font-size: 16px;
+          padding: 10px 10px 10px 30px;
+        }
+      padding: 0;
+      height: 30px;
+      width: 150px;
+      margin-left: 50px;
+      margin-bottom: 40px;
+        }
+    }
+    h3{
+      font-size: 30px;
+      font-weight: 500;
+      margin: 20px 0 50px 54px;
+      padding-top: 45px;
+      letter-spacing: 10px;
+      padding-bottom: 10px;
+      width: 160px;
+      &::before{
+        position: absolute;
+        content: "";
+        width: 155px;
+        height: 3px;
+        background-color: $main_color;
+        top: 90px;
+        @include sm{
+          top: 60px;
+          width: 120px;
+        }
+      }
+      @include sm{
+        margin: 30px 0 10px 10px;
+        font-size: 20px;
+        width: 125px;
+        padding-top: 30px;
+          }
+      }
+    p{
+      margin:0 55px 20px;
+      line-height: 40px;
+      @include sm{
+        line-height: 30px;
+        margin: 10px;
+        width: 250px;
+          }
+      }
+  }
+  .triangle-right{
+    z-index: 2;
+    position: relative;
+    top: -200px;
+    left: 590px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 35px 40px 35px 0;
+    border-color: transparent  rgb(255, 255, 255, 0.7) transparent transparent ;
+    @include sm{
+      top:5px;
+      left:200px;
+      transform:rotate(270deg);
+      }
+  }
+  }
+  }
+
+
+/*-----お申し込みの流れ-------------------------------------------------------------------------------------*/
+.application{
+  @include sm{
+    .button{
+  margin-top: 20px;
+    }
+    }
+  .application-box{
+    display: flex;
+    justify-content: space-between;
+    @include sm{
+    width: calc(100% - 55px);
+    display: block;
+    margin:0 auto;
+    padding-top: 10px;
+      }
+  }
+.ap_item{
+  text-align: center;
+  width: 311px;
+  height: 366px;
+  background-color: #FFF;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border: 2px solid #D2D2D2;
+  @include sm{
+  margin: 0 ;
+  width: 300px;
+  height: 370px;
+}
+  .step{
+    width: 100px;
+    color: $main_color;
+    margin: 30px auto;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    span{
+      font-size: 40px;
+    }
+    @include sm{
+    margin: 20px auto;
+      }
+  }
+  p{
+    width: 200px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    margin: 10px auto;
+    @include sm{
+    font-size: 16px;
+
+      }
+  }
+  img{
+    width: 175px;
+    height: 175px;
+    }
+}
+.ap_triangle{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 0 40px 40px;
+  border-color: transparent transparent transparent $main_color;
+  position: relative;
+  top:150px;
+  left: 0px;
+  @include sm{
+    top:0px;
+    left:45%;
+    transform:rotate(90deg);
+    }
+}
+}
+
+
+
+/*-----よくある質問-------------------------------------------------------------------------------------*/
+.question{
+  margin-top: 100px;
+  @include sm{
+  margin-top: 50px;
+    }
+.qa-list {
+  dl {
+    border: 2px solid #DCDCDC;
+    position: relative;
+    margin: 30px 0 0;
+    cursor: pointer;
+    &:first-child {
+      margin-top: 10px;
+    }
+    &::after {
+      position: absolute;
+      top: 20px;
+      right: 26px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      margin: auto;
+      content: '';
+      transform: rotate(135deg);
+      border-top: 4px solid #707070;
+      border-right: 4px solid #707070;
+    }
+  }
+  .open::after {
+    transform: rotate(-45deg);
+  }
+  dl {
+    line-height: 1;
+    dt {
+      position: relative;
+      margin: 0;
+      padding: 20px 60px 20px 60px;
+      font-weight: bold;
+      background: #EEE;
+      &::before {
+        font-size: 22px;
+        line-height: 1;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        display: block;
+        content: 'Q.';
+        color: $main_color;
+      }
+    }
+    dd {
+      background-color: #FFF;
+      &::before {
+        font-size: 22px;
+        position: absolute;
+        left: 20px;
+        display: block;
+        content: 'A.';
+        font-weight: bold;
+        color: $main_color;
+      }
+      position: relative;
+      margin: 0;
+      padding: 20px 20px 20px 60px;
+    }
+  }
+}
+.qa_more{
+  font-size: 20px;
+  text-align: right;
+  margin: 20px 0 100px;
+  @include sm{
+  margin: 10px;
+  font-size: 16px;
+  margin-bottom: 50px;
+    }
+  a{
+  &:hover{
+    color: $main_color;
+  }
+}
+  .qa_more_icon{
+    text-align: right;
+    width: 90%;
+    height: 5px;
+    background: url("../img/more_icon.png")no-repeat;
+    background-size: 16px;
+    background-position: left;
+    padding-left: 20px;
+    }
+  }
+}
+
+
+
+/*-----お問い合わせ-------------------------------------------------------------------------------------*/
+.contact{
+  @include sm{
+    width: 100%;
+    margin: 0;
+  }
+  img{
+    width: 84px;
+    height: 84px;
+    margin: 30px 0 20px 155px;
+    @include sm{
+    margin-left: 110px;
+        }
+      }
+  }
+.contact_item{
+  margin: 50px 100px;
+  width: 450px;
+  @include sm{
+    margin: 0 25px;
+    height: 0px;
+    width: 100%;
+    }
+
+  }
+.contact_bgcolor{
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fff;
+  height: 456px;
+  width: 100%;
+  margin-top: 10px;
+  @include sm{
+  display: block;
+  width: 100%;
+  max-width: $sm;
+  height: 580px;
+    }
+}
+.tel_balloon{
+  p{
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    @include sm{
+      font-size: 18px;
+    }
+  }
+  position: relative;
+  display: inline-block;
+  padding: 23px 45px;
+  width: 393px;
+  height: 80px;
+  color: #FFF;
+  font-size: 16px;
+  background: $main_color;
+  border-radius: 10px;
+  @include sm{
+  width: 300px;
+  height: 50px;
+  margin:  20px 5px 0 0;
+  padding: 8px 0 10px 0;
+    }
+  }
+.tel_balloon::before{
+  content: "";
+  position: absolute;
+  top: 99%;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-top: 15px solid $main_color;
+  @include sm{
+  top:48px;
+      }
+}
+.number{
+  display: block;
+  padding-bottom: 15px;
+  color: $main_color;
+  font-size: 51px;
+  font-weight: 700;
+  margin-top: 30px;
+  background:rgba(0, 0, 0, 0) linear-gradient(transparent 50%, #fdfdb1 50%) repeat scroll 0 0;
+  @include sm{
+  display: inline-block;
+  font-size: 40px;
+  margin-left: 20px;
+  margin-top: 0;
+      }
+    }
+.tel_time{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    font-size: 17px;
+    @include sm{
+    font-size: 14px;
+    width: 300px;
+    margin-top: 5px;
+
+        }
+}
+.btn_mail{
+  @include sm{
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    margin: 0;
+    }
+margin-top: 10px;
+margin-right: 0;
+padding: 20px 0;
+border-radius: 5px;
+box-shadow: 15px 11px 19px -9px rgba(0,0,0,0.6);
+a{
+  background: url("../img/btn_icon.png")no-repeat;
+  background-size: 25px;
+  background-position: 330px;
+  color:#FFF;
+  font-weight: 600;
+  font-size: 25px;
+  padding: 20px 65px 20px 50px;
+  @include sm{
+  padding: 20px 40px 20px 10px;
+  background-position: 240px 24px;
+  font-size: 20px;
+  background-size: 24px;
+      }
+}
+background-color: $main_color;
+transition: 1s;
+&:hover{
+  background-color: #66a857;
+}
+
+}
+.line{
+  border-left: 2px dashed #BEBCBC;
+  height: 400px;
+  margin-top: 30px;
+  @include sm{
+  border-left: none;
+  border-bottom: 2px dashed #BEBCBC;
+  height: 260px;
+      }
+}
+
+/*-----リクルートバナー-------------------------------------------------------------------------------------*/
+.recuruit{
+width: 100%;
+margin: 100px 0;
+transition: 0.5s;
+&:hover{
+    opacity: 0.7;
+}
+@include sm{
+width: 100%;
+margin: 30px 0;
+.recuruit_sm{display: block;}
+.recuruit{display: none;}
+      }
+}
+.recuruit_sm{
+  display: none;
+   @include sm{
+  display: block;
+  width: 100%;
+  max-width: $sm;
+  margin-bottom: 30px;
+}}
+.recuruit{display: block; @include sm{display: none;}}
+
+
+/*-----フッター-------------------------------------------------------------------------------------*/
+.footer{
+  @include sm{display: none;}
+.flex{display: flex;
+justify-content: center;
+}
+.footer_box{
+  margin: 80px 30px;
+  img{
+    width: 320px;
+    height: 80px;
+  }
+  .f_tel{
+    margin-top: 30px;
+    font-size: 14px;
+    p{
+      &:first-child{
+      font-size: 20px;
+      font-weight: 500;
+    }
+    }
+    .f_tel_icon{
+      font-weight: 700;
+      color: #90CB83;
+      font-size: 30px;
+      margin: 5px 0;
+      background: url("../img/header/tel_icon.png")no-repeat;
+      background-size: 30px;
+      background-position: left;
+      padding-left: 40px;
+    }
+  }
+  .f_mail{
+    border: 1px solid $main_color;
+    width: 330px;
+    padding: 5px 0px 5px 50px;
+    border-radius: 20px;
+    background: url("../img/mail.png")no-repeat;
+    background-size: 16px;
+    background-position: 30px ;
+    font-weight: 600;
+    margin-top: 10px;
+    a{
+      color: #333;
+    }
+  &:hover{
+    transition: 0.5s;
+    background-color: $main_color;
+    color: #333;}
+  }
+  .footer_menu{
+    display: flex;
+  }
+  }
+.f_t{
+margin-left: 30px;
+}
+  .f_t p{
+    margin: 10px 0;
+    font-weight: 700;
+  }
+  .f_t li a{
+    font-size: 14px;
+    width: 190px;
+    margin-top: 10px;
+    font-weight: 400;
+    background: url("../img/sub_menu_icon.png")no-repeat;
+    background-size: 13px;
+    background-position: left ;
+    padding-left: 18px;
+    line-height: 30px;
+    &:hover{
+    color: #66a857;
+    }
+  }
+}
+
+/*----コピーライト------------------------------------------------------------------------------------*/
+.copyright{
+  @include sm{font-size: 10px;
+  padding: 0;}
+  color:rgb(255, 255, 255);
+  text-align: center;
+  font-size: 12px;
+  background-color: $main_color;
+  padding: 10px;
+  p{
+  margin: 0;
+  }
+}
