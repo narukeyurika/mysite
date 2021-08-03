@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Sample</title>
+  <!-- BootstrapのCSS読み込み -->
+  <link href="reset.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <!-- jQuery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- BootstrapのJS読み込み -->
+  <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<header>
+
+<!--header上--->
+<div class="header_logo">
+  <h1>株式会社アクティブトソウワン</h1>
+  <p>営業時間:8:00~19:00  TEL:0800-8008-391</p>
+</div>
+
+<!--navigation--->
+<nav>
+  <ul>
+    <li><a href="#">当社について</a></li>
+    <li><a href="#">カラーシミュレーション</a></li>
+    <li class="has-child"><a href="#">無料診断</a>
+      <!--子要素を持つ li にはhas-childというクラス名をつける-->
+      <ul>
+        <li><a href="#">Service Top</a></li>
+        <li><a href="#">Service-1</a></li>
+        <li class="has-child"><a href="#">Service-2</a>
+          <ul>
+            <li><a href="#">Service-2 Top</a></li>
+            <li><a href="#">Service-2-1</a></li>
+            <li><a href="#">Service-2-2</a></li>
+            <li><a href="#">Service-2-3</a></li>
+            <li><a href="#">Service-2-4</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Service-3</a></li>
+      </ul>
+    </li>
+    <li class="has-child"><a href="#">施工事例</a>
+      <ul>
+        <li><a href="#">施工事例</a></li>
+        <li><a href="#">お客様の声</a></li>
+      </ul>
+    </li>
+    <li><a href="#">当社について</a></li>
+    <li><a href="#">お問い合わせ</a></li>
+  </ul>
+</nav>
+
+</header>
+<main>
+<!---キービジュアル--->
+<div class="key-v">
+    <p>『塗料×職人×工具』</p>
+    <p>すべてが揃っているクオリティを地域密着ならではの価格でー</p>
+    <p>アクティブトソウワン</p>
+    <p>牛久・龍ヶ崎をメインに800件以上の実績！</p>
+    <a href="#">無料見積もり実施中</a>
+</div>
+
+<!---こだわり--->
+<div class="commitment">
+<h２>アクティブトソウワンのこだわり</h２>
+<!---wrap--->
+<p>高品質な塗料で僧正以上の仕上がりへ</p>
+<p><img src="#" alt="#"></p>
+<p>使用している塗料は〇〇の△△や〇〇の△△などの高品質な塗料のみ！<br>
+   その中からお客様の住まいと相性の良い塗料をご提案します。
+</p>
+</div>
+<!---wrap--->
+<p>当社ならではの施工技術</p>
+<p><img src="#" alt="#"></p>
+<p>もちろん塗料を塗る機材にもこだわっており、マイクロファイバー系の密度の濃いローラーや高弾性塗料も吹き付けできるスプレー等を用意！そして下地処理からどこよりも丁寧に行うので年数が経てば経つほど差が出てくる外壁塗装に仕上がるのです！
+</p>
+</div>
+<!---wrap--->
+<p>職人がお見積もり時とご提案時に同席</p>
+<p><img src="#" alt="#"></p>
+<p>営業だけの話よりも実際に施工している職人から直接施工の話を聞いた方が納得感も安心感もグッと上がります。<br>
+「外壁塗装って実際にどうなの？」と疑問に思うことを職人に直接聞いてみてください！
+</p>
+</div>
+<!------>
+<div　class="commitment_2">
+  <p>
+    職人に聞いた<br>
+    アクティブトソウワンのこだわり！
+  </p>
+</div>
+
+<!------プライス------->
+<div class="price">
+<p>アクティブトソウワンに頼んで良かった！そう思ってもらいたい。<br>
+  だからできる全てのことを地域密着ならではの低価格でご提供します。
+</p>
+<p>
+  軒天、足場、高圧洗浄、養生、ひび割れコミコミ！
+  ＋
+  打ち合わせに職人が同席
+</p>
+<p>
+  ダイフレックス<br>
+  ダイヤスーパーセランフレックス（無機材）<br>
+  24年〜26年の耐久力！<br>
+  <p>３０坪　５０万円〜</p>
+</p>
+<div class="btn">詳しく見る→</div>
+</div>
+
+<!------カラーシミュレーション------->
+<div class="color_simulation">
+<h2>カラーシミュレーション</h2>
+<p>外壁の色で住まいの雰囲気はガラリと変わります！</p>
+<p><img src="#"></p>
+<p>お住いの写真を撮影して、実際に塗り替えた後のイメージをご覧いただけます！あなたの好きな色を組み合わせてみませんか？</p>
+<div class="btn">詳しく見る→</div>
+</div>
+
+<!------見積もり------->
+<div　class="estimate">
+  <p>無料診断見積もり実施中！</p>
+  <p>職人が実際にご自宅を拝見し屋根と外壁の状態をチェックいたします。塗り替えの時期なのかまだ数年は保つのかしっかり確認いたします！</p>
+</div>
+
+<!------施工実績------->
+<div class="result">
+  <div class="result_wrap">
+    <p><img src="#"></p>
+    <p>タイトル</p>
+  </div>
+  <div class="btn">もっと見る→</div>
+</div>
+
+<!------お客様の声------->
+<div class="customer's_voice">
+<h2>お客様の声</h2>
+<div class="customer's_voice_wrap">
+  <div class="c_v_contents">
+    <p>タイトル</p>
+    <p>本文本文本文本文本文本文本文本文本文本文</p>
+  </div>
+  <div class="c_v_contents">
+    <p>タイトル</p>
+    <p>本文本文本文本文本文本文本文本文本文本文</p>
+  </div>
+  <div class="c_v_contents">
+    <p>タイトル</p>
+    <p>本文本文本文本文本文本文本文本文本文本文</p>
+  </div>
+</div>
+<div class="btn">もっと見る→</div>
+
+<h2>当社なら心配いりません！</h2>
+<div class="q_box">
+  <div class="question">
+    <img src="#" alt="">
+    <p>適正価格がわからない。なんでこんなに差があるの？</p>
+  </div>
+  <div class="answer">
+    <p>使用している塗料や職人の人数によって変わってきます。極端に安い場合や「一式〇〇円」といった見積書はご注意ください。当社は施工エリアを限定し自社施工で行うことで価格を抑えています。</p>
+  </div>
+</div>
+<div class="q_box">
+  <div class="question">
+    <img src="#" alt="">
+    <p>塗装をして１年しか経ってないのにもうヒビが入ってる・・・</p>
+  </div>
+  <div class="answer">
+    <p>使う塗料の品質や塗料の希釈率が低いと塗りたての時はキレイでもすぐに劣化してきてしまいます。塗料についての説明が不十分な業者にはご注意ください。</p>
+  </div>
+</div>
+<div class="q_box">
+  <div class="question">
+    <img src="#" alt="">
+    <p>足場を立ててシートをつけると外から見えなくなる分、防犯面が心配。</p>
+  </div>
+  <div class="answer">
+    <p>当社は足場を立てた際に防犯カメラも設置していますのでご安心いただけます！</p>
+  </div>
+</div>
+
+<!------コラム------->
+<div class="column">
+  <div class="column_box">
+    <p>タイトル</p>
+    <p>本文本文本文本文本文本文本文</p>
+  </div>
+  <div class="column_box">
+    <p>タイトル</p>
+    <p>本文本文本文本文本文本文本文</p>
+  </div>
+  <div class="column_box">
+    <p>タイトル</p>
+    <p>本文本文本文本文本文本文本文</p>
+  </div>
+<div class="btn">もっと見る→</div>
+</div>
+
+<!------会社概要その他------->
+<div class="news_company">
+  <div class="news">
+    <p>日付/タイトルタイトルタイトルタイトル</p>
+  　<p>日付/タイトルタイトルタイトルタイトル</p>
+  　<p>日付/タイトルタイトルタイトルタイトル</p>
+  </div>
+  <div class="company">
+    <p>株式会社アクティブトソウワン</p>
+    <p>〇〇店</p>
+    <p>住所/TEL</p>
+    <p>〇〇店</p>
+    <p>住所/TEL</p>
+    <div class="btn">詳しく見る→</div>
+  </div>
+</div>
+
+</main>
+<!------------------footer---------------------->
+<footer>
+
+</footer>
+
+</body>
+</html>
