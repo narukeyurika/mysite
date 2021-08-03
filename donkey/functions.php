@@ -1,4 +1,3 @@
-
 <?php
 // コンテンツ幅をセット
 if (!isset($content_width)) {
@@ -222,4 +221,9 @@ function no_link_nav_menu($nav_menu,$args){
 	return str_replace('http://none','javascript:void(0);',$nav_menu);
 }
 add_filter('wp_nav_menu','no_link_nav_menu',9999,2);
+
+
+//WordPressバージョン出力metaタグ非表示
+remove_action('wp_head', 'wp_generator');
+
 ?>
