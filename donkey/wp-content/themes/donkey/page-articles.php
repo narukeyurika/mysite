@@ -26,8 +26,7 @@ EOM;
   ?>
 </main>
 <div class="wrap_bg">
-  <?php echo breadcrumb_func(); //パンくずリスト表示
-  ?>
+  <?php echo breadcrumb_func(); //パンくずリスト表示?>
 
   <section class="article-lists">
     <?php
@@ -44,11 +43,17 @@ EOM;
       'post_status' => 'publish' // 公開されているデータが対象
     ]);
 
+
     $iPages = $aPosts->max_num_pages;
 
     if ($aPosts->have_posts()) :
       while ($aPosts->have_posts()) : $aPosts->the_post();
-
+        //カテゴリーの色取得
+        $this_categories = get_the_category();
+        if ($this_categories) {
+          $this_category_color = get_field('color', 'category_' . $this_categories[0]->term_id);
+          $this_category_name  = $this_categories[0]->name;}
+        //
         $aCategory = get_the_category();
         $sCategorySlug = $aCategory[0]->slug;
         $sCategoryName = $aCategory[0]->cat_name;
@@ -64,17 +69,23 @@ EOM;
         if (trim($sPostExcerpt) == '') {
           // 抜粋が空だったら本文から文字を抽出
           $sPostExcerpt = mb_substr($sPostContent, 0, 130) . '...';
+          $this_category_color = get_field('color', 'category_' . $this_categories[0]->term_id);
+          $this_category_name  = $this_categories[0]->name;
         }
         echo '<div class="box">';
         echo '<div class="detail">';
         echo '<p class="post-date">' . esc_html($sPostDate) . '</p>';
-        echo '<span class="cate">' . esc_html($sCategoryName) . '</span>';
+        echo '<span class="entry-label" style="' . esc_attr( 'background:' . $this_category_color ) . ';">' . esc_html( $this_category_name ) . '</span>';
         echo '<h3 class="title"><a href="' . esc_url($sPostUrl) . '">' . esc_html($post->post_title) . '</h3>';
         echo '<p class="excerpt">' . esc_html($sPostExcerpt) . '</a></p>';
         echo '</div><!--/.detail-->';
         echo '</div><!--/.box-->';
       endwhile;
     endif;
+
+
+
+
 
     /**
      * ページネーション

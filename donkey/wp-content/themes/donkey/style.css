@@ -220,7 +220,7 @@ h2 {
   height: 0px;
   background: url("img/nav_off.png") no-repeat;
   background-size: 16px;
-  background-position: right 7px;
+  background-position: right 5px;
   padding-right: 20px;
   padding-bottom: 30px;
 }
@@ -317,9 +317,6 @@ h2 {
   .mobile-menu .sub-menu {
     display: block;
     width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-indent: 40px;
     position: relative;
   }
   .mobile-menu .sub-menu li {
@@ -358,7 +355,7 @@ h2 {
     border: solid 4px transparent;
     border-left: solid 6px #739100;
     position: absolute;
-    top: 50%;
+    top: 22px;
     left: 0;
     margin-top: -4px;
     margin-left: 45px;
@@ -442,7 +439,12 @@ header {
 
 .mobile-menu .mobile-menu .menu-item a {
   display: block;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 10px 10px 30px;
+}
+
+.mobile-menu .mobile-menu .menu-item .sub-menu a {
+  display: block;
+  padding: 10px 10px 10px 60px;
 }
 
 .mobile-menu #text {
@@ -976,6 +978,10 @@ header {
 }
 
 /*-----お申し込みの流れ-------------------------------------------------------------------------------------*/
+
+.main .application {
+  margin-bottom: 100px;
+}
 
 @media (max-width: 991px) {
   .main .application {
@@ -1545,10 +1551,9 @@ header {
 
 .footer #footer-menu .sub-menu .menu-item {
   width: auto;
-  height: 30px;
   background: url("img/sub_menu_icon.png") no-repeat;
   background-size: 16px;
-  background-position: left;
+  background-position: left 7px;
   padding-left: 20px;
 }
 
@@ -1561,7 +1566,8 @@ header {
 }
 
 .footer #footer-menu .menu-item-has-children {
-  margin: 0 20px;
+  margin: 0 auto;
+  width: 20%;
 }
 
 /*-----モバイルフッター------------*/
@@ -1669,7 +1675,7 @@ header {
 
 @media (max-width: 991px) {
   .wysiwyg-editor {
-    padding: 20px 0;
+    padding: 10px 0;
   }
 }
 
@@ -1794,6 +1800,7 @@ header {
 .breadcrumb {
   display: flex;
   margin-left: 10px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 991px) {
@@ -1902,7 +1909,7 @@ header {
   background-color: #c8dec3;
 }
 
-.article-lists .box .cate {
+.article-lists .box .entry-label {
   background-color: #78b36b;
   color: white;
   padding: 0 5px;
