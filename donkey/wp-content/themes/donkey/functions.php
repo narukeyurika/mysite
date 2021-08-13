@@ -227,3 +227,21 @@ add_filter('wp_nav_menu', 'no_link_nav_menu', 9999, 2);
 remove_action('wp_head', 'wp_generator');
 
 ?>
+<?php
+function categories_label() {
+$cats = get_the_category();
+if(!empty($cats)){
+if(!is_wp_error($cats)){
+foreach($cats as $cat){
+$cat_link = get_category_link($cat->term_id);
+$cat_name = $cat->name;
+$cat_id = $cat->cat_ID;
+$cat_color = 'category_'.$cat_id;
+$back_color = get_field('color',$cat_color);
+$txt_color = get_field('ca_color_txt',$cat_color);
+echo '<p class="category"><a href="'.$cat_link.'" style="background-color:'.$back_color.';color:'.$txt_color.';">'.$cat_name.'</a></p>';
+}
+}
+}
+}
+?>

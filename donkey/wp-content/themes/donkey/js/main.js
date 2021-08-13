@@ -88,19 +88,4 @@ $(".mobile-menu .menu-item-has-children a").on("click", function () {
   });
 });
 
-// return false;を指定すると推移は停止できるがクリックできなくなっちゃう
-/*子要素が全部開かないようにネクストを指定したけどうまくいかない
-$(function (){
-  $(".mobile-menu .menu-item-has-children").on("click", function () {
-    $('this').next().css('color','green');
-    $('.mobile-menu .menu-item-has-children').toggleClass('open');
-    return false;
-  });
-  });
 
-  $(".mobile-menu .menu-item-has-children a").on("click", function () {
-  $('.mobile-menu .sub-menu').slideToggle('slow');
-  $('.mobile-menu .menu-item-has-children').toggleClass('open');
-  return false;
-});
-*/

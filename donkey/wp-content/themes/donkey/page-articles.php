@@ -28,8 +28,8 @@ EOM;
 <div class="wrap_bg">
   <?php echo breadcrumb_func(); //パンくずリスト表示
   ?>
-  <section class="article-lists">
 
+  <section class="article-lists">
     <?php
     /**
      * 記事一覧の表示
@@ -63,13 +63,14 @@ EOM;
         $sPostExcerpt = esc_html($post->post_excerpt);
         if (trim($sPostExcerpt) == '') {
           // 抜粋が空だったら本文から文字を抽出
-          $sPostExcerpt = mb_substr($sPostContent, 0, 60) . '...';
+          $sPostExcerpt = mb_substr($sPostContent, 0, 130) . '...';
         }
         echo '<div class="box">';
         echo '<div class="detail">';
         echo '<p class="post-date">' . esc_html($sPostDate) . '</p>';
-        echo '<h3 class="title"><a href="' . esc_url($sPostUrl) . '">' . esc_html($post->post_title) . '</a></h3>';
-        echo '<p class="excerpt">' . esc_html($sPostExcerpt) . '</p>';
+        echo '<span class="cate">' . esc_html($sCategoryName) . '</span>';
+        echo '<h3 class="title"><a href="' . esc_url($sPostUrl) . '">' . esc_html($post->post_title) . '</h3>';
+        echo '<p class="excerpt">' . esc_html($sPostExcerpt) . '</a></p>';
         echo '</div><!--/.detail-->';
         echo '</div><!--/.box-->';
       endwhile;
@@ -106,6 +107,7 @@ EOM;
     }
     ?>
     <?php wp_reset_query(); ?>
+
 
   </section>
 </div>

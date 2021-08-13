@@ -6,7 +6,7 @@
     <meta name="description" content="訪問介護施設ケアステーションドンキーのHPです">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&display=swap" rel="stylesheet">
-
+    <link href="img/favicon.ico" type="image/x-icon" rel="icon">
     <?php wp_head(); ?>
 </head>
 
@@ -22,7 +22,7 @@
         <div class="f_item">
             <!--ロゴ-->
             <div class="logo">
-                <a href="http://donkey.localhost:8888/">
+                <a href="/">
                     <img src="<?php echo esc_url(get_theme_file_uri("img/header/logo.svg")); ?>" alt="pcロゴ画像">
                 </a>
             </div>
@@ -70,7 +70,7 @@
                     <p class="ham_time">【営業時間】9:00〜17:00<br>
                         【休日】日・祝・年末年始
                     </p>
-                    <a href="#" class="ham_btn">メールフォームはこちら</a>
+                    <a href="<?php echo esc_url(get_permalink(21)); ?>" class="ham_btn">メールフォームはこちら</a>
                 </div>
             </div>
 

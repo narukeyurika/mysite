@@ -24,7 +24,7 @@
             ?>
 
             <div class="single_cat">
-                </* 投稿日 */ ?>
+                <?php //投稿日?>
                 <span class="article-date">
                     <i class="far fa-clock"></i>
                     <time datetime="<?php echo get_the_date('Y-m-d'); ?>">
@@ -47,14 +47,6 @@
         <?php endwhile; ?>
     <?php endif; ?>
 
-    <div class="r_n">
-        <span class="return">
-            <?php previous_post_link('%link', '<  前の記事へ'); ?>
-        </span>
-        <span class="next">
-            <?php next_post_link('%link', '次の記事へ  >'); ?>
-        </span>
-    </div>
 
 
 </main>
