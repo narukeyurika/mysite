@@ -27,14 +27,21 @@ EOM;
 EOM;
     }
     ?>
-    <div class="editor_bg">
-      <?php echo breadcrumb_func(); //パンくずリスト表示
-      ?>
-      <div class="wysiwyg-editor">
-        <?php the_content(); ?>
-      </div>
-    </div>
   </main>
+
+  
+  <div class="breadcrumb_bg">
+    <?php echo breadcrumb_func(); //パンくずリスト表示
+    ?>
+  </div>
+
+  <div class="wrap_bg">
+    <div class="wysiwyg-editor">
+      <?php the_content(); ?>
+    </div>
+  </div>
+
+
 <?php endwhile; ?>
 
 <?php get_footer(); ?>

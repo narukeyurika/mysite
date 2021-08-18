@@ -25,7 +25,7 @@ $(function () {
 $(function (){
       new Hiraku('.js-offcanvas', {
         btn: ".js-offcanvas-btn",
-        fixedHeader: ".js-fixed-header",
+        fixedHeader: ".header .ham_span",
       });
     });
 
@@ -87,5 +87,3 @@ $(".mobile-menu .menu-item-has-children a").on("click", function () {
     $(this).parent().toggleClass('open');
   });
 });
-
-

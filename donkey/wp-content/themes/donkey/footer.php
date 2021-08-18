@@ -37,7 +37,9 @@
                <div class="m_f_contact">
                    <p>お問い合わせ・ご相談</p>
                    <p class="f_tel_icon">00-0000-0000</p>
-                   <p>【営業時間】9：00~17：00 <br>【休日】日・祝・年末年始</p>
+                   <p class="m_f_time">
+                       <span class="f_tel_time">営業時間</span>9：00~17：00 <br>
+                   <span class="f_tel_time">　休日　</span>日・祝・年末年始</p>
                </div>
            </div>
        </section>
