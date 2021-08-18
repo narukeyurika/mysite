@@ -26,7 +26,7 @@
         <section class="news">
             <div class="wrap">
                 <div class="news_title_box">
-                    <h2 class="news_title">最新情報</h2>
+                    <h2 class="news_title">お知らせ</h2>
                     <div class="news_img"><img src="<?php echo esc_url(get_theme_file_uri("img/main/news.png")); ?>" alt="ロバのイラスト"></div>
                 </div>
                 <div class="news_content_box2">
@@ -63,7 +63,7 @@
             <!----wrap.end---->
             <div class="news_more_wrap">
                 <a class="news_more" href="<?php echo esc_url(get_permalink(69)); ?>">
-                    最新情報一覧へ
+                    お知らせ一覧へ
                 </a>
             </div>
 </section>
