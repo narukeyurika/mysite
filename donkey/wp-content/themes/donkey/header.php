@@ -38,7 +38,6 @@
                 <div class="tel">
                     <p class="tel_green">
                         <img src="<?php echo esc_url(get_theme_file_uri("img/header/tel_icon.svg")); ?>" alt="電話アイコン">00-0000-0000
-                        <a class="header_mail" href="<?php echo esc_url(get_permalink(21)); ?>">お問い合わせ</a>
                     </p>
 
                 </div>

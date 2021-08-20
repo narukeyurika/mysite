@@ -80,6 +80,13 @@ function js_scripts()
         "1.0",
         true
     );
+    wp_enqueue_script(
+        'autosize',
+        get_template_directory_uri() . '/js/autosize.min.js',
+        array(),
+        "1.0",
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'js_scripts');
 //
@@ -191,7 +198,7 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 
-// Gutenberg用のCSSを読み込む エディタでCSSを表示
+// Gutenberg用のCSSを読み込む
 add_action('enqueue_block_editor_assets', 'gutenberg_stylesheets_custom');
 function gutenberg_stylesheets_custom()
 {
@@ -228,20 +235,28 @@ remove_action('wp_head', 'wp_generator');
 
 ?>
 <?php
-function categories_label() {
-$cats = get_the_category();
-if(!empty($cats)){
-if(!is_wp_error($cats)){
-foreach($cats as $cat){
-$cat_link = get_category_link($cat->term_id);
-$cat_name = $cat->name;
-$cat_id = $cat->cat_ID;
-$cat_color = 'category_'.$cat_id;
-$back_color = get_field('color',$cat_color);
-$txt_color = get_field('ca_color_txt',$cat_color);
-echo '<p class="category"><a href="'.$cat_link.'" style="background-color:'.$back_color.';color:'.$txt_color.';">'.$cat_name.'</a></p>';
+function categories_label()
+{
+    $cats = get_the_category();
+    if (!empty($cats)) {
+        if (!is_wp_error($cats)) {
+            foreach ($cats as $cat) {
+                $cat_link = get_category_link($cat->term_id);
+                $cat_name = $cat->name;
+                $cat_id = $cat->cat_ID;
+                $cat_color = 'category_' . $cat_id;
+                $back_color = get_field('color', $cat_color);
+                $txt_color = get_field('ca_color_txt', $cat_color);
+                echo '<p class="category"><a href="' . $cat_link . '" style="background-color:' . $back_color . ';color:' . $txt_color . ';">' . $cat_name . '</a></p>';
+            }
+        }
+    }
 }
-}
-}
-}
+
+
+add_action('admin_init', function () {
+    add_editor_style();
+});
+
+
 ?>

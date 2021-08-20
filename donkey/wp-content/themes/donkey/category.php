@@ -14,10 +14,6 @@
     </span>
   </div>
 
-  <div class="breadcrumb_bg">
-    <?php echo breadcrumb_func(); //パンくずリスト表示
-    ?>
-  </div>
 
   <div class="wrap_bg">
     <main class="main category">
@@ -39,20 +35,10 @@
 
       <?php endwhile;
       endif; ?>
+      <?php echo breadcrumb_func(); //パンくずリスト表示
+      ?>
     </main>
+
   </div>
 
   <?php get_footer(); ?>
-
-  <!----
-  <div class="box">
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    <h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <p class="cat_time_catname">
-      <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time>
-      <span><?php the_category(', '); ?></span>
-    </p>
-
-    <p><?php the_content('続きを見る'); ?></p>
-  </div>
-!>

@@ -9,7 +9,7 @@
                    <div class="f_tel">
                        <p>お問い合わせ・ご相談</p>
                        <p class="f_tel_icon">00-0000-0000</p>
-                       <p>[営業時間]9：00~17：00 休日】日・祝・年末年始</p>
+                       <p>【営業時間】9：00~17：00 【休日】日・祝・年末年始</p>
                    </div>
                    <div class="f_mail">
                        <a href="<?php echo esc_url(get_permalink(21)); ?>">

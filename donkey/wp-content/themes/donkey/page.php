@@ -27,20 +27,16 @@ EOM;
 EOM;
     }
     ?>
-  </main>
+    <div class="wrap_bg">
+      <div class="wysiwyg-editor">
+        <?php the_content(); ?>
 
-  
-  <div class="breadcrumb_bg">
-    <?php echo breadcrumb_func(); //パンくずリスト表示
-    ?>
-  </div>
-
-  <div class="wrap_bg">
-    <div class="wysiwyg-editor">
-      <?php the_content(); ?>
+      </div>
+      <?php echo breadcrumb_func(); //パンくずリスト表示
+      ?>
     </div>
-  </div>
 
+  </main>
 
 <?php endwhile; ?>
 

@@ -75,15 +75,15 @@ $(function(){//ハンバーガーメニュー元の開閉
 });
 
 
-
-
-
-
-
 $(function () {//ハンバーガーメニューの子要素の開閉
 $('.mobile-menu .sub-menu').hide();
 $(".mobile-menu .menu-item-has-children a").on("click", function () {
     $(this).next().slideToggle('slow');
     $(this).parent().toggleClass('open');
   });
+});
+
+
+$(function () {//テキストエリア
+  autosize($('.autosize'));
 });
