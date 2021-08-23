@@ -3,10 +3,7 @@
 
 <?php get_header(); //ヘッダーを取得
 ?>
-<div class="breadcrumb_bg">
-    <?php echo breadcrumb_func(); //パンくずリスト表示
-    ?>
-</div>
+
 
 
 <div class="wrap_bg">
@@ -56,6 +53,8 @@
             <p class="return"><a href="<?php echo esc_url(get_permalink(69)); ?>">最新情報一覧に戻る</a></p>
         </div>
 
+            <?php echo breadcrumb_func(); //パンくずリスト表示
+            ?>
     </main>
 </div>
 
