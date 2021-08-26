@@ -39,7 +39,8 @@
                    <p class="f_tel_icon">00-0000-0000</p>
                    <p class="m_f_time">
                        <span class="f_tel_time">営業時間</span>9：00~17：00 <br>
-                   <span class="f_tel_time">　休日　</span>日・祝・年末年始</p>
+                       <span class="f_tel_time">　休日　</span>日･祝･年末年始
+                   </p>
                </div>
            </div>
        </section>

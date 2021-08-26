@@ -65,7 +65,9 @@
                 <!-----ハンバーガー下層部分----->
                 <div class="ham_under">
                     <div class="ham_logo">
-                        <img src="<?php echo esc_url(get_theme_file_uri("img/header/logo.svg")); ?>" alt="ロゴ画像">
+                        <a href="/">
+                            <img src="<?php echo esc_url(get_theme_file_uri("img/header/logo.svg")); ?>" alt="ロゴ画像">
+                        </a>
                     </div>
                     <div class="ham_content">
                         <p>お問い合わせ・ご相談</p>

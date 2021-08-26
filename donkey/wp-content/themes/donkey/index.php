@@ -77,25 +77,44 @@
             <div class="service1">
                 <div class="box_1">
                     <h3>身体介護</h3>
+                    <!---画像スマホ表示--->
+                    <div class="service_sm_img"><img src="<?php echo esc_url(get_theme_file_uri("img/main/service_img1.jpg")); ?>" alt="身体介護のイメージ写真"></div>
+                    <!-------------->
                     <p>利用者様のご自宅を直接訪問し、食事・入浴・排泄など直接身体に触れるサービスです。
                         利用者が自宅にいても自立した日常生活を送れるように生活を支援することが目的です。
                     </p>
                     <div class="button">
                         <a href="<?php echo esc_url(get_permalink(65)); ?>">詳しく見る</a>
                     </div>
+                    <!---ボタンスマホ表示--->
+                    <div class="service_sm_button">
+                        <a href="<?php echo esc_url(get_permalink(65)); ?>">詳しく見る</a>
+                    </div>
+                    <!-------------->
                 </div>
                 <div class="triangle-left"></div>
+
             </div>
+
             <!---生活援助--->
             <div class="service2">
                 <div class="box_4">
                     <h3>生活援助</h3>
+                    <!---画像スマホ表示--->
+                    <div class="service_sm_img"><img src="<?php echo esc_url(get_theme_file_uri("img/main/service_img2.jpg")); ?>" alt="身体介護のイメージ写真"></div>
+                    <!-------------->
                     <p>利用者が一人暮らしや同居している家族が行うことが困難など何かしらの理由で行うことが困難な日常生活の家事を代わりに行うサービスです。
                         食事の準備や掃除洗濯買い物をお手伝いします。
                     </p>
                     <div class="button">
                         <a href="<?php echo esc_url(get_permalink(67)); ?>">詳しく見る</a>
                     </div>
+                    <!---ボタンスマホ表示--->
+                    <div class="service_sm_button">
+                        <a href="<?php echo esc_url(get_permalink(65)); ?>">詳しく見る</a>
+                    </div>
+                    <!-------------->
+
                 </div>
                 <div class="triangle-right"></div>
             </div>

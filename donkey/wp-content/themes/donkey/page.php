@@ -4,7 +4,8 @@
 
 
 <?php while (have_posts()) : the_post(); ?>
-  <main class="main page standard common-lower">
+  <!--アイキャッチがある時のみ、CSSで設定している背景を上書きする-->
+  <div class="eye_catch">
     <?php
     $sTitle = esc_html(get_the_title());
     echo <<<EOM
@@ -15,28 +16,29 @@
     </div>
   </section>
 EOM;
-    /* アイキャッチがある時のみ、CSSで設定している背景を上書きする */
     if (has_post_thumbnail()) {
       $sBgUrl = esc_url(get_the_post_thumbnail_url(get_the_ID(), 'large'));
       echo <<<EOM
   <style>
-    .page.standard #main-visual-underlayer .mv-wrapper {
+    .eye_catch #main-visual-underlayer .mv-wrapper {
       background-image: url({$sBgUrl});
     }
   </style>
 EOM;
     }
     ?>
-    <div class="wrap_bg">
+  </div>
+  <!-------->
+  <div class="wrap_bg">
+    <main class="main page standard common-lower">
       <div class="wysiwyg-editor">
         <?php the_content(); ?>
 
       </div>
       <?php echo breadcrumb_func(); //パンくずリスト表示
       ?>
-    </div>
-
-  </main>
+    </main>
+  </div>
 
 <?php endwhile; ?>
 

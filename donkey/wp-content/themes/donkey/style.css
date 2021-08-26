@@ -20,6 +20,7 @@ body a {
 .main {
   margin: auto;
   padding: 0 5%;
+  max-width: 1200px;
 }
 
 .wrap_bg {
@@ -54,7 +55,7 @@ h2 {
 .button {
   width: 298px;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding: 12px 0;
   border-radius: 28px;
   text-align: center;
@@ -98,12 +99,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-@media (max-width: 991px) {
-  .explanation {
-    margin-bottom: 0;
-  }
-}
-
 /*-------------------------------------------------------------*/
 
 /*----------------heder--------------*/
@@ -117,7 +112,7 @@ h2 {
 .header .header_wrap {
   max-width: 1400px;
   width: 100%;
-  margin: 0 auto 20px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -272,7 +267,7 @@ h2 {
 .c-global-nav .sub-menu .menu-item {
   width: auto;
   background: url("img/sub_menu_icon.png") no-repeat;
-  background-size: 16px;
+  background-size: 14px;
   background-position: left 6px;
   padding-left: 0 20px;
 }
@@ -365,7 +360,7 @@ h2 {
   background-color: #90CB83;
   padding: 0 5px 5px 5px;
   position: fixed;
-  top: 40px;
+  top: 25px;
   right: 20px;
   opacity: 0.8;
   display: none;
@@ -383,13 +378,14 @@ h2 {
 /*ハンバーガーメニュー下層中身*/
 
 .mobile-menu .ham_under {
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
   line-height: 1.4;
+  padding-bottom: 20px;
 }
 
 .mobile-menu .ham_logo img {
-  max-width: 80%;
+  max-width: 75%;
   margin: 0 auto;
   height: auto;
   display: block;
@@ -404,7 +400,7 @@ h2 {
 
 .mobile-menu .ham_content {
   margin: 0 auto;
-  max-width: 180px;
+  max-width: 80%;
   display: block;
 }
 
@@ -432,20 +428,20 @@ h2 {
 
 .mobile-menu .ham_under .ham_btn {
   text-align: center;
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: clamp(14px, 1vw, 20px);
   font-weight: 600;
   background-color: #90CB83;
   border-radius: 28px;
-  max-width: 85%;
-  margin: 0 auto;
-  padding: 5px 3px;
+  max-width: 100%;
+  margin: 0 20px;
+  padding: 5px;
   display: block;
   color: white;
 }
 
 .mobile-menu .mobile-menu .menu-item a {
   display: block;
-  padding: 10px 10px 10px 20px;
+  padding: 10px 20px;
 }
 
 .mobile-menu .mobile-menu .menu-item .sub-menu a {
@@ -495,9 +491,9 @@ h2 {
 @media (max-width: 991px) {
   .key_visual .main_font {
     position: absolute;
-    width: 40%;
+    width: 200px;
     height: auto;
-    top: 140px;
+    top: 120px;
     right: 20px;
   }
 }
@@ -538,7 +534,7 @@ h2 {
   height: auto;
 }
 
-/*------------最新情報--------------*/
+/*------------お知らせ--------------*/
 
 .main .news {
   margin-bottom: 100px;
@@ -706,41 +702,39 @@ h2 {
 .main .service .service1 {
   background-image: url(img/main/service_img1.jpg);
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 80%;
   height: clamp(500px, 1vw, 800px);
   background-position: right 0;
   margin-top: 10px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   position: relative;
+  flex-direction: column;
 }
 
 @media (max-width: 991px) {
   .main .service .service1 {
-    background-position: 0px 380px;
-    background-size: 100%;
-    height: clamp(570px, 1vw, 700px);
-    margin-bottom: 30px;
+    height: auto;
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: none;
+    margin-bottom: 5%;
   }
 }
 
 .main .service .service1 h3 {
   font-size: 30px;
   font-weight: 500;
-  margin: 15px 0 40px;
-  padding-top: 45px;
-  letter-spacing: 10px;
+  margin: 60px 0 40px;
+  letter-spacing: 3px;
   padding-bottom: 10px;
-  width: 160px;
+  position: relative;
 }
 
 @media (max-width: 991px) {
   .main .service .service1 h3 {
     margin: 0 0 10px 10px;
     font-size: 20px;
-    width: 125px;
-    padding-top: 30px;
   }
 }
 
@@ -748,47 +742,41 @@ h2 {
   /*--線--*/
   position: absolute;
   content: "";
-  width: 155px;
   height: 3px;
   background-color: #90CB83;
-  top: 100px;
-}
-
-@media (max-width: 991px) {
-  .main .service .service1 h3::before {
-    top: 60px;
-    width: 120px;
-  }
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .main .service .service1 p {
-  margin: 0 55px 60px;
+  margin: 0 55px 60px 40px;
   line-height: 2;
 }
 
 @media (max-width: 991px) {
   .main .service .service1 p {
     line-height: 2;
-    margin: 0;
+    margin: 0 auto;
     width: 90%;
   }
 }
 
 .main .service .service1 .box_1 {
-  position: relative;
   width: 570px;
   background-color: rgba(255, 255, 255, 0.7);
   z-index: 3;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
 @media (max-width: 991px) {
   .main .service .service1 .box_1 {
     width: 100%;
-    margin-top: 20px;
-    top: -130px
+    background: none;
+    justify-content: flex-end;
   }
 }
 
@@ -800,7 +788,11 @@ h2 {
   .main .service .service1 .box_1 .button {
     padding: 5px;
     max-width: 200px;
-    margin: 20px auto 30px;
+    position: absolute;
+    top: 450px;
+    right: 0;
+    left: 0;
+    display: none;
   }
   .main .service .service1 .box_1 .button a {
     font-size: 16px;
@@ -808,7 +800,6 @@ h2 {
 }
 
 .main .service .service1 .box_2 {
-  /*--img--*/
   width: 100%;
   max-width: 640px;
   position: relative;
@@ -847,9 +838,53 @@ h2 {
 
 @media (max-width: 991px) {
   .main .service .service1 .triangle-left {
+    display: none;
     top: 307px;
     left: 120px;
     transform: rotate(90deg);
+  }
+}
+
+.service_sm_img {
+  display: none;
+}
+
+.service_sm_button {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .service_sm_img {
+    margin: 0 auto;
+    width: 90%;
+    display: block;
+  }
+  .service_sm_img img {
+    width: 100%;
+    height: auto;
+  }
+  .service_sm_button {
+    display: block;
+    margin: 20px 0 30px;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 200px;
+    height: 40px;
+    padding-top: 5px;
+    padding: 8px 45px;
+    border-radius: 28px;
+    text-align: center;
+    background-color: #90CB83;
+    transition: 1s;
+  }
+  .service_sm_button a {
+    background: url(img/btn_icon.png) no-repeat;
+    background-size: 18px;
+    background-position: 0px;
+    vertical-align: center;
+    color: #FFF;
+    text-align: center;
+    padding-left: 30px;
   }
 }
 
@@ -858,7 +893,7 @@ h2 {
 .main .service .service2 {
   background-image: url(img/main/service_img2.jpg);
   background-repeat: no-repeat;
-  background-size: 70%;
+  background-size: 80%;
   height: clamp(500px, 1vw, 800px);
   background-position: left 0px;
   margin-bottom: 100px;
@@ -867,15 +902,16 @@ h2 {
   flex-direction: column;
   align-items: flex-end;
   position: relative;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 @media (max-width: 991px) {
   .main .service .service2 {
-    background-position: 0px 420px;
-    background-size: 100%;
-    height: clamp(610px, 1vw, 700px);
-    margin-bottom: 30px;
+    background: none;
+    background-position: center 420px;
+    background-size: 90%;
+    height: auto;
+    margin: 0px 0 50px;
   }
 }
 
@@ -906,7 +942,7 @@ h2 {
 @media (max-width: 991px) {
   .main .service .service2 .box_4 {
     width: 100%;
-    top: -120px;
+    top: 0px;
   }
 }
 
@@ -919,6 +955,7 @@ h2 {
     padding: 5px;
     max-width: 200px;
     margin: 20px auto 30px;
+    display: none;
   }
   .main .service .service2 .box_4 .button a {
     font-size: 16px;
@@ -928,49 +965,41 @@ h2 {
 .main .service .service2 .box_4 h3 {
   font-size: 30px;
   font-weight: 500;
-  margin: 20px 0 40px;
-  padding-top: 45px;
-  letter-spacing: 10px;
+  margin: 60px 0 40px;
+  letter-spacing: 3px;
   padding-bottom: 10px;
-  width: 160px;
+  position: relative;
 }
 
 .main .service .service2 .box_4 h3::before {
   /*--線--*/
   position: absolute;
   content: "";
-  width: 155px;
   height: 3px;
   background-color: #90CB83;
-  top: 105px;
-}
-
-@media (max-width: 991px) {
-  .main .service .service2 .box_4 h3::before {
-    top: 70px;
-    width: 120px;
-  }
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 @media (max-width: 991px) {
   .main .service .service2 .box_4 h3 {
     margin: 0px 0 10px 10px;
     font-size: 20px;
-    width: 125px;
     padding-top: 30px;
   }
 }
 
 .main .service .service2 .box_4 p {
-  margin: 0 55px 20px;
+  margin: 0 55px 40px;
   line-height: 2;
 }
 
 @media (max-width: 991px) {
   .main .service .service2 .box_4 p {
     line-height: 2;
-    margin: 10px 0 10px 15px;
-    padding: 0 5px;
+    margin: 0 auto;
     width: 90%;
   }
 }
@@ -988,6 +1017,7 @@ h2 {
 
 @media (max-width: 991px) {
   .main .service .service2 .triangle-right {
+    display: none;
     top: 348px;
     left: 45%;
     transform: rotate(270deg);
@@ -1023,7 +1053,6 @@ h2 {
     width: 100%;
     display: block;
     margin: 0 auto;
-    padding-top: 10px;
   }
 }
 
@@ -1666,7 +1695,7 @@ h2 {
 
 /*# sourceMappingURL=style.css.map */
 
-/*----ーーーーーーーーーーーーーーーーーーーーーーーーーー-----*/
+/*----ーーーーーーーーー以下ワードプレスーーーーーーーーーーーーーーーーー-----*/
 
 .smb-panels__item__figure:hover {
   opacity: 0.6;
@@ -1723,6 +1752,7 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 
 .main.common-lower p {
   line-height: 1.7;
+  margin: 10px 0;
 }
 
 @media (max-width: 991px) {
@@ -1833,13 +1863,13 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 
 .main.single.common-lower .image {
   margin: 0 auto;
-  max-width: 80%;
+  max-width: 100%;
   display: block;
 }
 
 .main.single.common-lower .single_cat {
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 @media (max-width: 991px) {
@@ -1856,7 +1886,7 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 @media (max-width: 991px) {
   /*スノーモンキーのpaddingの調整*/
   .wp-block-media-text .wp-block-media-text__content {
-    padding: 0;
+    padding: 15px;
   }
   .wp-block-columns.has-background {
     padding: 10px;
@@ -1899,7 +1929,6 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 @media (max-width: 991px) {
   .breadcrumb {
     font-size: 12px;
-    margin-left: 20px;
   }
 }
 
@@ -1936,6 +1965,16 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
   }
 }
 
+.wp-block-table {
+  padding: 0 20px;
+}
+
+/*-見出し上の余白削除-*/
+
+.smb-panels__item__body *:first-child {
+  margin-top: 0;
+}
+
 /*--モバイル画像の調整--*/
 
 .wp-block-media-text__media img, .wp-block-media-text__media video {
@@ -1948,14 +1987,14 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 .main.single.common-lower h1 {
   margin-bottom: 30px;
   padding-top: 30px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 @media (max-width: 991px) {
   .main.single.common-lower h1 {
     margin-bottom: 0;
-    padding: 10px;
+    padding: 10px 0;
   }
 }
 
@@ -1968,7 +2007,7 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 @media (max-width: 991px) {
   .wysiwyg-editor {
     max-width: 991px;
-    padding: 20px;
+    padding: 20px 10px;
   }
 }
 
@@ -2023,7 +2062,9 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
   background-color: #e6f0e4;
 }
 
-.article-lists .box .entry-label {
+/*カテゴリー名の色*/
+
+.entry-label {
   background-color: #78b36b;
   color: white;
   padding: 0 5px;
@@ -2035,18 +2076,11 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
   transition: 1s;
 }
 
-.article-lists .box:last-child {
-  margin-bottom: 30px;
-}
-
-.article-lists .box .detail p {
-  padding: 0 10px;
-}
-
 .wp-block-image img {
   /*記事の画像サイズ調整*/
   max-width: 100%;
   height: auto;
+  padding: 10px;
 }
 
 /*--タイトルとカテゴリー横並び-*/
@@ -2082,6 +2116,7 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 @media (max-width: 991px) {
   .main.single.common-lower .return_wrap .return {
     padding: 0 20px;
+    margin-bottom: 30px;
     background-position: left 6px;
   }
 }
@@ -2102,8 +2137,13 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
   padding: 0;
 }
 
+.main.category p {
+  line-height: 1.7;
+  margin: 5px 0;
+}
+
 .category_page .breadcrumb {
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
 .category_page .cat_name_wrap {
@@ -2142,7 +2182,9 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 }
 
 .category_page .main.category .box {
-  padding: 60px;
+  padding: 5%;
+  width: 100%;
+  margin: 0 auto;
   background-color: white;
   display: block;
 }
@@ -2169,9 +2211,11 @@ p, table, blockquote, address, pre, iframe, form, figure, dl {
 }
 
 .main.category .box h2 {
-  background-image: none;
+  margin: 20px 0 5px;
+  font-weight: 600;
+  font-size: 20px;
   padding: 0;
-  font-size: 25px;
+  background-image: none;
 }
 
 @media (max-width: 991px) {
@@ -2450,8 +2494,7 @@ input.wpcf7-submit:hover {
 .side-bar {
   background-color: white;
   width: 30%;
-  margin-bottom: 30px;
-  border-left: solid 1px #90CB83;
+  border-left: solid 2px #bbd6b4;
 }
 
 @media(max-width:991px) {
@@ -2473,13 +2516,14 @@ input.wpcf7-submit:hover {
   }
 }
 
-.side-bar .headline {
-  background-color: #90CB83;
+.sidebar_wrap .side-bar .headline {
+  background-color: #bbd6b4;
   font-size: 20px;
   display: block;
   padding: 30px;
   color: white;
   font-weight: 600;
+  margin: 0;
 }
 
 .side-bar .category-lists {
